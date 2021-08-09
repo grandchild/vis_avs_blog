@@ -1,0 +1,4 @@
+[submodule "themes/lines"]
+	path = themes/lines
+	url = https://github.com/grandchild/hugo-theme-lines
+	branch = main

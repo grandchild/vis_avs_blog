@@ -1,0 +1,6 @@
+baseURL = 'https://effekthasch.org/avs/blog/'
+languageCode = 'en-us'
+title = 'AVS Dev Blog'
+theme = 'lines'
+
+ignoreErrors = ["error-missing-instagram-accesstoken"]
