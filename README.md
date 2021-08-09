@@ -2,6 +2,8 @@
 
 The blog accompanying [vis_avs](github.com/grandchild/vis_avs).
 
+https://effekthasch.org/avs/blog
+
 ### Build
 
 ```shell
