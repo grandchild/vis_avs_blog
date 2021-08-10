@@ -21,11 +21,11 @@ There's a whole bucket of easily-accessible effects that could be just added in,
 simple sliders, checkboxes and color choosers that would immediately change what would
 happen next. Your personal little pixel aquarium with a very fancy stick to stir and
 whip its contents into so many shapes. It invited you to just play or to realize a
-vision, a toy and a tool at the same time.  And at all times it allowed both, to play
-with the vision as it emerged, in your mind and on-screen. After that, learning AVS's
-builtin scripting language allowed you to go almost arbitrarily far—and many people
-did. With or without code, AVS allowed you to develop a personal style and as a result
-whole sub-genres and taxonomies of flavors emerged over time.
+vision, a toy and a tool at the same time.  And always it allowed both, to play with the
+vision as it emerged, in your mind and on-screen. After that, learning AVS's builtin
+scripting language allowed you to go almost arbitrarily far—and many people did. With or
+without code, AVS allowed you to develop a personal style and as a result whole
+sub-genres and taxonomies of flavors emerged over time.
 
 Around 2006 (a.k.a. six years too late) I found an online community of like-minded
 people on the [Winamp Forums][forums], DeviantArt and on IRC. I also met quite a few
