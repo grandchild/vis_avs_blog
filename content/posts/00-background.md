@@ -48,11 +48,12 @@ sizes doubled and doubled again (while AVS's speed did not) and more exciting to
 became available.
 
 But still AVS held a special place in the hearts of all of us, as a potent catalyst for
-creative expression, learning tool and favorite toy. Seeing it dwindle filled many with
-nostalgia. When the source code to AVS was released in 2005, it gave rise to a
-[forum thread of hope][oss-avs-thread], and the same in 2010, when original author
-Justin Frankel released [a new version][chavs-thread] with a few new language features.
-But each time the optimism subsided again when no significant updates emerged.
+creative expression, learning tool and favorite toy. Seeing it dwindle filled
+[many][avs-unconed] [with][avs-frames] [nostalgia][avs-frames-zamuz]. When the source
+code to AVS was released in 2005, it gave rise to a [forum thread of
+hope][oss-avs-thread], and the same in 2010, when original author Justin Frankel
+released [a new version][chavs-thread] with a few new language features. But each time
+the optimism subsided again when no significant updates emerged.
 
 Over all this time, one thing did grow: The feeling that if AVS were not somehow dragged
 into the present and possibly the future, then all the fantastic works done by many
@@ -109,6 +110,7 @@ Here's to hoping I can make good use of it.
 [avsmixer]: https://github.com/grandchild/AVS-Mixer/
 [avs-unconed]: https://acko.net/blog/avs/
 [avs-frames]: https://www.deviantart.com/framesofreality/journal/long-time-no-see-contemporary-art-questions-345306886
+[avs-frames-zamuz]: https://www.deviantart.com/comments/1/345306886/3200407897
 [oss-avs-thread]: http://forums.winamp.com/showthread.php?s=&threadid=216394
 [chavs-thread]: http://forums.winamp.com/showthread.php?t=321482
 [c99avs]: https://gitlab.com/J_Darnley/Advanced-Visualization-Studio
