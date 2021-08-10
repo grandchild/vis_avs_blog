@@ -30,7 +30,7 @@ sub-genres and taxonomies of flavors emerged over time.
 Around 2006 (a.k.a. six years too late) I found an online community of like-minded
 people on the [Winamp Forums][forums], DeviantArt and on IRC. I also met quite a few
 people in person over the years, first _toniq_, whom I mistook for _Tonic_, in my
-hometown. Later I visited [_Yathosho_][visbot], [_micro.D_][microd], and even met
+hometown. Later I visited [_Yathosho_][yathosho], [_micro.D_][microd], and even met
 [framesofreality][frames] for about 30 minutes. Before that, in the final throes of
 school, there I met Lukas, a.k.a [_HuRriC4nE_][hurricane] back then, or
 [_exo-cortex_][exocortex] these days. Together, as [_Effekthasch_][ehorg], we did some
@@ -101,6 +101,7 @@ Here's to hoping I can make good use of it.
 
 [forums]: http://forums.winamp.com/forumdisplay.php?f=85 "Winamp's AVS Forums"
 [visbot]: https://visbot.net
+[yathosho]: https://www.deviantart.com/yathosho
 [microd]: https://www.mcro.de/
 [frames]: https://www.deviantart.com/framesofreality/
 [hurricane]: https://thehurric4ne.deviantart.com/
