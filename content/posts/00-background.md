@@ -73,7 +73,9 @@ satisfactory level of compatibility.
 
 [The version I started][vis_avs] aims at completeness and compatibility first. The
 initial motivator was making accessible what we created in the past to a future
-audience.
+audience. To that end, AVS's source code must first be put in better shape to be more
+portable across compilers, and in the future even operating systems. This is _not_ a
+rewrite, but a proper fork and hopefully an actual continuation of development.
 
 There's no saying this attempt will fare any better than others, but at least I tried to
 avoid the trope of starting-fresh-then-falling-short by never straying far from 100%.
