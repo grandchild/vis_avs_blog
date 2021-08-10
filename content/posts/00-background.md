@@ -71,8 +71,9 @@ and a [Javascript+WebGL port][webvs] which promised to bring AVS to the (now
 web-captured) masses once again. All of these fell somewhat silent before reaching a
 satisfactory level of compatibility.
 
-The version I started aims at completeness and compatibility first. The initial
-motivator was making accessible what we created in the past to a future audience.
+[The version I started][vis_avs] aims at completeness and compatibility first. The
+initial motivator was making accessible what we created in the past to a future
+audience.
 
 There's no saying this attempt will fare any better than others, but at least I tried to
 avoid the trope of starting-fresh-then-falling-short by never straying far from 100%.
@@ -104,3 +105,4 @@ Here's to hoping I can make good use of it.
 [c99avs]: https://gitlab.com/J_Darnley/Advanced-Visualization-Studio
 [dxavs]: https://github.com/Const-me/vis_avs_dx
 [webvs]: https://github.com/azeem/webvs/
+[vis_avs]: https://github.com/grandchild/vis_avs
