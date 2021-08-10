@@ -64,18 +64,25 @@ side-offerings of AVS:
 * Sharp & colorful images, endlessly new, and
 * Completely open presets, giving rise to a remixing community rarely equaled.
 
-Quite a suprising amount of rewrites where attempted in the 2010s: There's a
-[C rewrite][c99avs] aiming at portability and cleanliness, a [DirecX11 version][dxavs]
-leveraging GPUs to achieve (for AVS) ungodly resolutions at the cost of completeness,
-and a [Javascript+WebGL port][webvs] which promised to bring AVS to the (now
-web-captured) masses once again. All of these fell somewhat silent before reaching a
-satisfactory level of compatibility.
+Quite a suprising amount of rewrites where attempted in the 2010s, all of them by people
+who weren't known as AVS artists: There's a [C rewrite][c99avs] aiming at portability
+and cleanliness, a [DirecX11 version][dxavs] leveraging GPUs to achieve (for AVS)
+ungodly resolutions at the cost of completeness, and a [Javascript+WebGL port][webvs]
+which promised to bring AVS to the (now web-captured) masses once again. All of these
+fell somewhat silent before reaching a satisfactory level of compatibility.
 
-[The version I started][vis_avs] aims at completeness and compatibility first. The
-initial motivator was making accessible what we created in the past to a future
-audience. To that end, AVS's source code must first be put in better shape to be more
-portable across compilers, and in the future even operating systems. This is _not_ a
-rewrite, but a proper fork and hopefully an actual continuation of development.
+Two people who _were_ known (_Jheriko_ and _OnionringOfDoom_) did something a little
+different around 2012 and wrote a [standalone wrapper for the pre-existing Winamp plugin
+DLL][standaloneavs], allowing you to capture AVS videos from audio files. Dumping the
+video from AVS was a bit of a hack, the wrapper injecting itself into the preset before
+loading it with AVS. I never actually tried using it, but apparently it did work.
+
+[The version I started][vis_avs] is _not_ a rewrite but a continuation on the original
+source code. It aims for completeness and compatibility first. The initial motivator was
+to make accessible what we created in the past to a future audience. To that end, AVS's
+source code must be put in better shape to be more portable across compilers, and in the
+future even operating systems. I want this to be an actual continuation of development
+too.
 
 There's no saying this attempt will fare any better than others, but at least I tried to
 avoid the trope of starting-fresh-then-falling-short by never straying far from 100%.
@@ -85,8 +92,8 @@ for future development and ports.
 
 I start this blog and write this post after having already done a lot of cleanup and at
 a time when AVS already compiles with GCC. But it is also the first day of a whole year
-off for me. No regular work, no other projects in the way. Just a list of exciting
-projects with AVS at the top of the list.
+off for me. No regular work, no other todos in the way. Just a list of exciting projects
+with AVS at the top of the list.
 
 Here's to hoping I can make good use of it.
 
@@ -107,4 +114,5 @@ Here's to hoping I can make good use of it.
 [c99avs]: https://gitlab.com/J_Darnley/Advanced-Visualization-Studio
 [dxavs]: https://github.com/Const-me/vis_avs_dx
 [webvs]: https://github.com/azeem/webvs/
+[standaloneavs]: https://jheriko-rtw.blogspot.com/2012/10/reliving-past-bringing-dead-software.html
 [vis_avs]: https://github.com/grandchild/vis_avs
