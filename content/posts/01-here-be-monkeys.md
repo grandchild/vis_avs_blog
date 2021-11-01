@@ -103,7 +103,7 @@ The solution I chose, was probably the most expensive one, but the one with the 
 long-term benefits: Incorporate the code for all popular APEs' into AVS itself. I
 started working on importing APEs into the AVS codebase after receiving the source code
 for _Convolution Filter_ from Tom Holden. But actually having the source code was a
-rarity. Many APEs where written at a time before version control was _really_ popular,
+rarity. Many APEs were written at a time before version control was _really_ popular,
 and consequently most APE authors lost the source code to their effects over the years.
 Because there are (as of today) only 4 APEs' source code available to me, for the rest
 I started the long march of decompiling and rewriting. There is a different approach,
