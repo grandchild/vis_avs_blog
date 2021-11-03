@@ -104,6 +104,7 @@ that it simply switches when an effect that makes use of it is done rendering.
 `audio` contains waveform and spectrogram data, each for both left and right stereo
 audio channels.
 
+
 ### The C++ ABI Problem
 
 APE's are C++ DLLs, because AVS expects an effect _class_ that it can instantiate. And
@@ -121,36 +122,50 @@ differently in binary, and so AVS will not load the old APEs --- or worse, it wi
     caption="If you see this you are having a bad problem and you will not go to space today."
 >}}
 
+
 ### APE Archaeology
 
 The solution I chose, was probably the most expensive one, but the one with the most
 long-term benefits: Incorporate the code for all popular APEs' into AVS itself. I
 started working on importing APEs into the AVS codebase after receiving the source code
 for _Convolution Filter_ from Tom Holden. But actually having the source code was a
-rarity. Many APEs were written at a time before version control was _really_ popular,
-and consequently most APE authors lost the source code to their effects over the years.
-Because there are (as of today) only 4 APEs' source code available to me, for the rest
-I started the long march of decompiling and rewriting. There is a different approach,
-that I wasn't fully aware of at the time I started, which I will talk about later.
+rarity. Many APEs were written at a time before version control and online repository
+hosting were _really_ popular, and consequently most APE authors lost the source code
+to their effects over the years. Because there are (as of today) only 4 APEs' source
+code available to me, I started the long march of decompiling and rewriting the rest.
+There is a different approach, that I wasn't fully aware of at the time I started,
+which I will talk about a bit later.
 
 To reconstruct effects that I had no source code to, I used [Ghidra][ghidra], the open
 source decompiler, to look at the APE binaries and figure out how it is that they do
 their thing.
 
+Usually, when compiling a program into an executable binary, all function and variable
+names that the programmer carefully chose to concisely reflect their meaning get
+completely lost. Every function now simply becomes an address, i.e. just a number, and
+every variable just an index into the stack[^2]. So when you open a binary in Ghidra
+and look at the decompiled C code it deduced from it, you will only see a lot of
+`uVar7`, `iVar2` and `fun_37f57ac8()` and so on, all ordered in an apparently random
+fashion. This is not very meaningful at first glance. The work in a binary analysis
+tool like this is to help the decompiler and tell it about things _you've_ deduced.
+This means labeling variables and functions, and --- more importantly --- telling the
+decompiler about variable types and defining data structures, like classes.
+
 {{<figure
     src="ghidra.png"
-    alt="Ghidra (binary analysis tool & decompiler) screenshot showing both disassembly listing on the left and decompiled C code on the right. The upper third of the visible C code is a complex multi-line expression with various Ghidra-specific helper functions, corresponding to a portion of x86 MMX SIMD instructions in the assembly listing on the left. The lower two-thirds of the C code contain more regular control flow code with assignments, if clauses and while loops."
-    caption="Not exactly production-ready C code. Note that variables are already named meaningfully, and data structures have been defined, all by hand."
+    alt="Ghidra (binary analysis tool & decompiler) screenshot showing both disassembly listing on the left and decompiled C code on the right. The upper third of the visible C++ code is a complex multi-line expression with various Ghidra-specific helper functions, corresponding to a portion of x86 MMX SIMD instructions. The lower two-thirds of the C++ code contain more regular control flow code with assignments, if clauses and while loops."
+    caption="Not exactly production-ready C++ code. Note how many of the variables are already named meaningfully, and data structures have been defined, all by hand."
 >}}
 
 I learned a lot about the binary layout of programs through working with Ghidra, and,
-with the help of the decompiled C code that it gave me, was able to rewrite the APEs'
+with the help of the decompiled C++ code that it gave me, was able to rewrite the APEs'
 code. If I can offer one advice to anyone attempting to turn a binary back into source
 code, it's this: Try to figure out the data structures (`struct`s and `class`es) as
 early as possible and define them in Ghidra, and set variable types. As the
 (ever-evolving) definition of the data structures approaches something correct, the
-decompiled C code will start to simplify and clarify a _lot_ from the gibberish that it
-initially comes out as.
+decompiled C++ code will start to simplify and clarify a _lot_ from the gibberish that
+it initially comes out as. I found this [tutorial for dealing with C++
+classes][ghidra-tutorial-pdf] extremely helpful.
 
 Figuring out UI handler code was thankfully a lot easier because by its nature it uses a
 lot of Win32-UI API calls, which are external to the APE and are thus referenced by
@@ -172,6 +187,7 @@ For now unfortunately, loading APEs and so extending AVS remains impossible. But
 a shame to keep it that way, so the part about turning the APE interface into a C
 interface might still happen in the future.
 
+
 ### Current Status
 
 Currently there are about 3 to 5 APEs left to implement (depending on how much time I
@@ -181,7 +197,7 @@ shipping. The remaining effects shouldn't take as much time as the previous bunc
 
 After that comes the big work of separating the UI, porting to Linux, and _finally_
 getting some semblance of an automated testing setup installed, so that trivial
-regressions don't happen quite so often. And maybe we'll see some 64-bit action
+regressions don't happen quite so often. And maybe there will be some 64-bit action
 sometime after that?
 
 We'll see...
@@ -191,6 +207,7 @@ We'll see...
 [long-tail]: https://en.wikipedia.org/wiki/Long_tail
 [stats-all]: component-stats-all.png
 [ghidra]: https://ghidra-sre.org
+[ghidra-tutorial-pdf]: https://ghidra.re/courses/GhidraClass/Advanced/improvingDisassemblyAndDecompilation.pdf
 
 
 [^1]: The "framebuffer" is a section of memory that eventually becomes the pixels of the
@@ -199,3 +216,10 @@ size, and where each element corresponds to a pixel. Each pixel may be further
 subdivided into red, green and blue --- but that's not a requirement. In AVS that's the
 case, each pixel is a 32-bit integer, with 8 bits allocated for each of the three color
 channels, and the final 8 bits unused (usually just set to 0).
+
+[^2]: In this context, it suffices to understand the stack as a list of things that the
+current context (or "scope") needs, which is usually the currently executed function.
+If, for example, what a function does is swap the two parameters it's given, there will
+be three items on the stack while the function is doing its thing: the first and the
+second parameter, and the temporary location that is needed to hold one of the values
+while the other is being copied to the first location.
