@@ -40,11 +40,11 @@ preset.
 I went over my complete collection of presets, removed duplicates and redid the
 calculation just now. The distribution for only the APEs is [fairly
 unsurprising][long-tail] with a few very popular ones and a long tail of rarely used
-effects.(If you want, you can see the same graph for _all_ effects [here][stats-all].)
+effects. (If you want, you can see the same graph for _all_ effects [here][stats-all].)
 
 {{<figure
     src="component-stats-with-missing.png"
-    alt=""
+    alt="A bar graph listing effect usages by how many presets use a given APE at least once. The leftmost bar shows the total amount of presets scanned, at 14722. The next bars show usage for each individual APE found in at least one preset: ColorMap 8284, ConvolutionFilter 6868, TexerII 2037, AVSTransAutomation 678, AddBorders 444, Triangle 426, MultiFilter 255, Texer 239, FramerateLimiter 232, FyrewurX 185, GlobalVariables 150, Normalize 139, PictureII 73, AVIPlayer 2, Fluid 2 and MIDITrace 1"
     caption="Colormap and Convolution Filter leading the pack, rightly so. Marked in red are the ones that are currently not available."
 >}}
 
