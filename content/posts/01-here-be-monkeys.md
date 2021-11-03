@@ -29,6 +29,30 @@ codeable effects within AVS. Others allowed you to limit the framerate of the pr
 or resize the editor window (which was not possible out-of-the-box).
 
 
+### Usage
+
+There are a few more APEs than these --- some more popular, some less so. Some years ago
+I gathered some numbers on just _how_ popular which one is. For this I used the
+[JSON converter for AVS presets][webvsc] to convert all presets I had to JSON and then
+was easily able to count how often each effect (both built-in and APE) was used by a
+preset.
+
+I went over my complete collection of presets, removed duplicates and redid the
+calculation just now. The distribution for only the APEs is [fairly
+unsurprising][long-tail] with a few very popular ones and a long tail of rarely used
+effects.(If you want, you can see the same graph for _all_ effects [here][stats-all].)
+
+{{<figure
+    src="component-stats-with-missing.png"
+    alt=""
+    caption="Colormap and Convolution Filter leading the pack, rightly so. Marked in red are the ones that are currently not available."
+>}}
+
+
+With a similar graph in hand, I prioritized which APEs to implement first --- and also
+which ones to I'm going to skip completely, probably.
+
+
 ### The APE API
 
 An APE can modify the framebuffer[^1] as much as it wants to. It's also given some
@@ -163,6 +187,9 @@ sometime after that?
 We'll see...
 
 
+[webvsc]: https://github.com/grandchild/AVS-File-Decoder
+[long-tail]: https://en.wikipedia.org/wiki/Long_tail
+[stats-all]: component-stats-all.png
 [ghidra]: https://ghidra-sre.org
 
 
