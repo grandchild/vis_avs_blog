@@ -13,6 +13,7 @@ keyed by its previous color:
 
 {{<figure
     src="colormap.png"
+    alt="A screenshot of AVS in the background (with a purple, white and yellow abstract visual) with the AVS editor window open on top of it. The editor shows the effect tree for a preset on the left third and the interface for the ColorMap APE in the remaining space. The ColorMap interface shows an editable color strip at the top with movable color handles, that form a gradient resembling the colors in the main AVS window. Below the color strip are various controls for both editing the map, as well as for input and output blending of the effect with the previous image."
 >}}
 
 
@@ -21,6 +22,7 @@ nearby pixels, for blur, edge detection or more extreme pixel pattern effects:
 
 {{<figure
     src="convofilter.png"
+    alt="A screenshot of AVS in the background (with a very pixelated black and white abstract visual) with the AVS editor window open on top of it. The editor shows the effect tree for a preset on the left third and the interface for the ConvolutionFilter APE in the remaining space. The ConvolutionFilter interface consists mainly of a 7 by 7 grid of number entry fields, which are filled with positive and negative integer numbers that form a circular shape around the center (since the center entry corresponds to the current pixel, and the rest to its neighbors). To the right of the grid are 4 checkboxes, labelled 'Enabled', 'Wrap-around', 'Absolute' and '2-pass'; and 3 buttons labelled 'Save', 'Load' and 'Clear'. Below the grid are two entry fields labelled 'Bias' and 'Scaling', the latter one with an additional button reading 'Auto'."
 >}}
 
 But there's also _AVS Trans Automation_ which doesn't affect the image itself, but the
