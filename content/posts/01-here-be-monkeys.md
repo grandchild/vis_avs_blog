@@ -52,7 +52,7 @@ effects. (If you want, you can see the same graph for _all_ effects [here][stats
 
 
 With a similar graph in hand, I prioritized which APEs to implement first --- and also
-which ones to I'm going to skip completely, probably.
+which ones I'm going to skip completely, probably.
 
 
 ### The APE API
