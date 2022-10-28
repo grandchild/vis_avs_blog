@@ -67,7 +67,7 @@ side-offerings of AVS:
 
 Quite a suprising amount of rewrites where attempted in the 2010s, all of them by people
 who weren't known as AVS artists: There's a [C rewrite][c99avs] aiming at portability
-and cleanliness, a [DirecX11 version][dxavs] leveraging GPUs to achieve (for AVS)
+and cleanliness, a [DirectX11 version][dxavs] leveraging GPUs to achieve (for AVS)
 ungodly resolutions at the cost of completeness, and a [Javascript+WebGL port][webvs]
 which promised to bring AVS to the (now web-captured) masses once again. All of these
 fell somewhat silent before reaching a satisfactory level of compatibility.
