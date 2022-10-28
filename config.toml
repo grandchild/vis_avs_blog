@@ -4,3 +4,9 @@ title = 'AVS Dev Blog'
 theme = 'lines'
 
 ignoreErrors = ["error-missing-instagram-accesstoken"]
+
+# This dance is needed to allow raw HTML sequences to be passed through the markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
